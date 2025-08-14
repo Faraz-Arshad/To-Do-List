@@ -17,6 +17,35 @@ function initApp() {
     renderAllTasks();
     updateStats();
     showEmptyState();
+    
+    // Mobile-specific optimizations
+    if (window.innerWidth <= 768) {
+        optimizeForMobile();
+    }
+}
+
+// Mobile optimizations
+function optimizeForMobile() {
+    // Prevent zoom on input focus for iOS
+    const inputs = document.querySelectorAll('input');
+    inputs.forEach(input => {
+        input.addEventListener('focus', () => {
+            if (input.type === 'text') {
+                input.style.fontSize = '16px';
+            }
+        });
+    });
+    
+    // Add touch feedback for buttons
+    const buttons = document.querySelectorAll('button');
+    buttons.forEach(button => {
+        button.addEventListener('touchstart', () => {
+            button.style.transform = 'scale(0.95)';
+        });
+        button.addEventListener('touchend', () => {
+            button.style.transform = '';
+        });
+    });
 }
 
 function renderAllTasks() {
