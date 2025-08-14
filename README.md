@@ -42,7 +42,7 @@ A beautiful, feature-rich todo list application built with vanilla JavaScript, H
 
 ## Live Demo
 
-Visit the live demo: [Your GitHub Pages URL will be here]
+Visit the live demo: (https://faraz-arshad.github.io/To-Do-List/)
 
 ## License
 
@@ -51,3 +51,4 @@ This project is open source and available under the [MIT License](LICENSE).
 ---
 
 Made with ❤️ using vanilla web technologies
+
